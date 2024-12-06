@@ -1,0 +1,35 @@
+@import "../../../assets/styles/main.scss";
+
+.videoPlayerWrapper {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+
+}
+
+.actionButtonContainer {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  transform: translateY(-50%);
+  z-index: 1;
+  @include vertical_align_center;
+
+  @include md {
+    left: rem(30);
+    bottom: rem(30);
+  }
+
+  .actionButtonAlignment {
+    @include pointer;
+    @include svg;
+    @include vertical_align_center;
+
+    &:last-child {
+      margin-left: 10px;
+    }
+  }
+
+
+}
+

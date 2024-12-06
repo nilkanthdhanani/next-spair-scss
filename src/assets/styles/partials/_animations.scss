@@ -1,0 +1,53 @@
+@mixin transition-3s {
+  transition: $transition-time $transition-name;
+}
+
+@mixin bottom-border-animation {
+  display: block;
+  position: relative;
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    left: 0;
+    transform-origin: left;
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+}
+
+.plusIconContainer {
+  cursor: pointer;
+  position: relative;
+  height: rem(12);
+  width: rem(12);
+
+  @include lg {
+    height: rem(16);
+    width: rem(16);
+  }
+
+  .line {
+    height: rem(1);
+    width: rem(12);
+    position: absolute;
+    left: 0;
+    background-color: getColorHex("white");
+    top: 50%;
+    @include transition-3s;
+
+    @include lg {
+      width: rem(16);
+    }
+  }
+  .lineClose {
+    transform: rotate(90deg);
+  }
+}

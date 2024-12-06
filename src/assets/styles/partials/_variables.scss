@@ -1,0 +1,53 @@
+// colors
+
+// Brand Colours
+$colors: (
+  "border-color": #e0e0e0,
+) !default;
+
+// animations
+$transition-time: 0.3s;
+$transition-name: ease-in-out;
+
+// fnb button variables
+$mBtnPadding: 8 16;
+$dBtnPadding: 8 52;
+$mCtaSize: 14;
+$mCtaLineHeight: 18;
+$dCtaSize: 16;
+$dCtaLineHeight: 20;
+$ctaLetterSpacing: 1;
+
+$mInputPadding: 12 16;
+$dInputPadding: 12 16;
+$mInputSize: 16;
+$mInputLineHeight: 22;
+$dInputSize: 16;
+$dInputLineHeight: 22;
+$inputLetterSpacing: 0.4;
+
+$mDropdownPadding: 12 16;
+$dDropdownPadding: 12 16;
+$mDropdownSize: 16;
+$mDropdownLineHeight: 22;
+$dDropdownSize: 16;
+$dDropdownLineHeight: 22;
+$dropdownLetterSpacing: 0.4;
+
+$mSelectPadding: 8 16 8 28;
+$dSelectPadding: 8 16 8px 28;
+$mSelectSize: 14;
+$mSelectLineHeight: 18;
+$dSelectSize: 16;
+$dSelectLineHeight: 20;
+$selectLetterSpacing: 0.4;
+
+
+@function getColorHex($colorname, $opacity: 1) {
+  $color: map-get($colors, $colorname);
+  @if $opacity == 1 {
+    @return $color;
+  } @else {
+    @return rgba(red($color), green($color), blue($color), $opacity);
+  }
+}

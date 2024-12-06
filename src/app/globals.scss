@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.no-scroll {
+    position: fixed;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.no-scroll::-webkit-scrollbar {
+    background: #fff;
+}
+

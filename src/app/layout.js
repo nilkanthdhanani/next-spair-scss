@@ -1,3 +1,4 @@
+"use client"
 import { Inter } from "next/font/google";
 import "@/app/globals.scss";
 import "@/assets/styles/main.scss";
@@ -7,15 +8,12 @@ import Footer from "@/common/footer";
 import Header from "@/common/header";
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "File Title",
-  description: "file discription",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <title>File Title</title>
+        <meta name="description" content="file discription" />
         <link rel="icon" href="./favicon.ico" />
       </head>
       <body className={inter.className}>
